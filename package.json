@@ -1,0 +1,17 @@
+{
+  "name": "mf-vite-repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "proxy": "node proxy.js",
+    "dev:remote-a": "pnpm --filter remote-a dev",
+    "dev:remote-b": "pnpm --filter remote-b dev",
+    "dev:remote-c": "pnpm --filter remote-c dev",
+    "dev:host-vite8": "pnpm --filter host-vite8 dev",
+    "dev:host-vite7": "pnpm --filter host-vite7 dev"
+  },
+  "dependencies": {
+    "http-proxy-middleware": "^4.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "remote-a",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.2.0",
+    "plugin-wrapper-remote": "workspace:*",
+    "svelte": "^5.56.8"
+  },
+  "devDependencies": {
+    "vite": "^8.0.0"
+  }
+}
