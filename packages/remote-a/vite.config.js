@@ -14,6 +14,9 @@ export default defineConfig({
       name: 'remote-a',
       exposes: { './Button': './src/Button.svelte' },
       publicPath: '/remote-a/',
+      shared: {
+        'shared-lib': { singleton: true, requiredVersion: '*' },
+      },
     }),
   ],
 });
