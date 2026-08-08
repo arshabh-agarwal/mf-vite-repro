@@ -7,7 +7,7 @@ const routes = {
   '/remote-c': 'http://localhost:5003',
   '/host-vite7': 'http://localhost:5004',
   '/host-vite8': 'http://localhost:5005',
-  '/host-webpack': 'http://localhost:8080',
+  '/host-webpack': 'http://localhost:5006',
 };
 
 const proxies = Object.entries(routes).map(([prefix, target]) => ({
@@ -53,5 +53,5 @@ server.listen(3000, () => {
   console.log('  /remote-c      → http://localhost:5003');
   console.log('  /host-vite7    → http://localhost:5004');
   console.log('  /host-vite8    → http://localhost:5005');
-  console.log('  /host-webpack  → http://localhost:8080');
+  console.log('  /host-webpack  → http://localhost:5006');
 });

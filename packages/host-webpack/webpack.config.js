@@ -7,10 +7,10 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'http://localhost:8080/',
+    publicPath: 'http://localhost:5006/',
   },
   devServer: {
-    port: 8080,
+    port: 5006,
     hot: false,
     headers: {
       'Access-Control-Allow-Origin': '*',
