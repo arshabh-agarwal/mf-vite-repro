@@ -15,6 +15,9 @@ export default defineConfig({
         'remote-b': '/remote-b/mf-manifest.json',
         'remote-c': '/remote-c/mf-manifest.json',
       },
+      shared: {
+        'shared-lib': { singleton: true, requiredVersion: '*' },
+      },
     }),
   ],
 });
