@@ -1,4 +1,9 @@
 import 'shared-lib';
-import 'remote-a/Button';
-import 'remote-b/Card';
-import 'remote-c/Dashboard';
+
+async function mountRemotes() {
+  await import('remote-a/Button');
+  await import('remote-b/Card');
+  await import('remote-c/Dashboard');
+}
+
+mountRemotes();
