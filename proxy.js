@@ -16,6 +16,7 @@ const proxies = Object.entries(routes).map(([prefix, target]) => ({
     target,
     changeOrigin: true,
     ws: true,
+    pathRewrite: prefix === '/host-webpack' ? { [`^/host-webpack`]: '' } : undefined,
   }),
 }));
 
