@@ -16,5 +16,8 @@ export function withHostFederation({ name, remotes, shared = {} }) {
     remotes: normalizedRemotes,
     shared,
     dts: false,
+    experiments: {
+      asyncStartup: true,
+    },
   });
 }
