@@ -24,6 +24,9 @@ importers:
       plugin-wrapper-host:
         specifier: workspace:*
         version: link:../plugin-wrapper-host
+      shared-lib:
+        specifier: workspace:*
+        version: link:../shared-lib
     devDependencies:
       vite:
         specifier: ^7.0.0
