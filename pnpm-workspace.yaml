@@ -1,2 +1,5 @@
 packages:
   - packages/*
+
+overrides:
+  "@module-federation/vite": "1.15.0"
