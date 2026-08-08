@@ -10,9 +10,10 @@
     "dev:remote-c": "pnpm --filter remote-c dev",
     "dev:host-vite8": "pnpm --filter host-vite8 dev",
     "dev:host-vite7": "pnpm --filter host-vite7 dev",
-    "dev": "concurrently -n proxy,remote-a,remote-b,remote-c,host-vite7,host-vite8 -c gray,blue,cyan,magenta,yellow,green \"node proxy.js\" \"pnpm dev:remote-a\" \"pnpm dev:remote-b\" \"pnpm dev:remote-c\" \"pnpm dev:host-vite7\" \"pnpm dev:host-vite8\"",
+    "dev:host-webpack": "pnpm --filter host-webpack dev",
+    "dev": "concurrently -n proxy,remote-a,remote-b,remote-c,host-vite7,host-vite8,host-webpack -c gray,blue,cyan,magenta,yellow,green,red \"node proxy.js\" \"pnpm dev:remote-a\" \"pnpm dev:remote-b\" \"pnpm dev:remote-c\" \"pnpm dev:host-vite7\" \"pnpm dev:host-vite8\" \"pnpm dev:host-webpack\"",
     "build:remotes": "pnpm --filter remote-a build && pnpm --filter remote-b build && pnpm --filter remote-c build",
-    "start": "pnpm build:remotes && concurrently -n proxy,remote-a,remote-b,remote-c,host-vite7,host-vite8 -c gray,blue,cyan,magenta,yellow,green \"node proxy.js\" \"pnpm --filter remote-a preview\" \"pnpm --filter remote-b preview\" \"pnpm --filter remote-c preview\" \"pnpm dev:host-vite7\" \"pnpm dev:host-vite8\""
+    "start": "pnpm build:remotes && concurrently -n proxy,remote-a,remote-b,remote-c,host-vite7,host-vite8,host-webpack -c gray,blue,cyan,magenta,yellow,green,red \"node proxy.js\" \"pnpm --filter remote-a preview\" \"pnpm --filter remote-b preview\" \"pnpm --filter remote-c preview\" \"pnpm dev:host-vite7\" \"pnpm dev:host-vite8\" \"pnpm dev:host-webpack\""
   },
   "dependencies": {
     "http-proxy-middleware": "^4.2.0"

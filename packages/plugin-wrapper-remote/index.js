@@ -20,5 +20,8 @@ export function withRemoteFederation({ name, exposes, publicPath, remotes = {}, 
     shared,
     dts: false,
     publicPath,
+    experiments: {
+      asyncStartup: true,
+    },
   });
 }

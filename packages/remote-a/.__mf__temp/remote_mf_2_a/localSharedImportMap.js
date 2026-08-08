@@ -8,11 +8,6 @@
           let pkg = await import("/Volumes/code/module-federation/mf-vite-repro/packages/shared-lib/index.js");
             return pkg;
         }
-      ,
-        "svelte": async () => {
-          let pkg = await import("__mf__virtual/__mfe_internal__remote_mf_2_a__prebuild__svelte__prebuild__.js");
-            return pkg;
-        }
       
     }
       const usedShared = {
