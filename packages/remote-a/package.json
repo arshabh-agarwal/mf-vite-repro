@@ -9,6 +9,7 @@
   "dependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.2.0",
     "plugin-wrapper-remote": "workspace:*",
+    "shared-lib": "workspace:*",
     "svelte": "^5.56.8"
   },
   "devDependencies": {
