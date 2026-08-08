@@ -9,9 +9,13 @@
     "dev:remote-b": "pnpm --filter remote-b dev",
     "dev:remote-c": "pnpm --filter remote-c dev",
     "dev:host-vite8": "pnpm --filter host-vite8 dev",
-    "dev:host-vite7": "pnpm --filter host-vite7 dev"
+    "dev:host-vite7": "pnpm --filter host-vite7 dev",
+    "dev": "concurrently -n proxy,remote-a,remote-b,remote-c,host-vite8 -c gray,blue,cyan,magenta,green \"node proxy.js\" \"pnpm dev:remote-a\" \"pnpm dev:remote-b\" \"pnpm dev:remote-c\" \"pnpm dev:host-vite8\""
   },
   "dependencies": {
     "http-proxy-middleware": "^4.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
   }
 }
